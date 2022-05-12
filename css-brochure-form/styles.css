@@ -1,0 +1,55 @@
+form {
+  width: 50%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+  color: #ef7570;
+}
+
+.brandon {
+  font-family: "Brandon Grotesque", serif;
+}
+
+label {
+  font-size: small;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: medium;
+  font-family: AtlasGrotesk, serif;
+  border: 1px solid lightgray;
+}
+
+#howmany {
+  font-size: smaller;
+  background-color: #f3f3f3;
+  padding-left: 10px;
+}
+
+#button {
+  background-color: #ec5d58;
+  border-radius: 50px;
+  color: white;
+  width: 100px;
+  text-align: center;
+  border-style: none;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
