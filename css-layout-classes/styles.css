@@ -1,0 +1,47 @@
+h1,
+h2,
+p {
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  padding: 10px;
+  display: flex;
+}
+
+.column-one-third {
+  width: 33.33%;
+  padding: 5px;
+}
+
+.column-one-third > img {
+  margin-right: 5px;
+  padding-right: 5px;
+  width: 100%;
+}
+
+.align-content {
+  align-content: flex-end;
+}
+
+.column-one-fourth {
+  width: 25%;
+}
+
+.column-two-third {
+  width: 66.66%;
+}
+
+.column-one-fourth > img {
+  width: 100%;
+}
