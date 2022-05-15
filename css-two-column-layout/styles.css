@@ -60,3 +60,7 @@ button {
   padding-right: 40px;
   box-shadow: none;
 }
+
+p {
+  line-height: 1.6;
+}
