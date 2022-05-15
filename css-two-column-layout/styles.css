@@ -1,25 +1,27 @@
 .container {
   max-width: 800px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row {
   display: flex;
 }
 
-.one-half {
+.col-one-half {
   width: 50%;
-  padding: 20px;
-  display: flex;
 }
 
-.one-fourth {
+.adjust-padding-20 {
+  padding: 20px;
+}
+
+.col-one-fourth {
   width: 25%;
 }
 
-.three-fourth {
+.col-three-fourth {
   width: 75%;
-  padding: 10px;
 }
 
 img {
