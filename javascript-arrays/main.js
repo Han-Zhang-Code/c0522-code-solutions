@@ -1,0 +1,19 @@
+var colors = ['red', 'white', 'blue'];
+console.log('value of colors[0]', colors[0]);
+console.log('value of colors[1]', colors[1]);
+console.log('value of colors[2]', colors[2]);
+var astring = 'America is ' + colors[0] + ', ' + colors[1] + ', and ' + colors[2];
+console.log(astring);
+colors[2] = 'green';
+var bstring = 'Mexico is ' + colors[0] + ', ' + colors[1] + ', and ' + colors[2];
+console.log(bstring);
+console.log('value of colors', colors);
+
+var students = ['Keith Sebald', 'Justin Whitacre', 'Jordan Osman', 'Erin Belka'];
+var numberOfStudents = students.length;
+var cstring = 'there are ' + numberOfStudents + ' students in the class.';
+console.log(cstring);
+var lastIndex = students.length - 1;
+var lastStudent = students[lastIndex];
+console.log('The last student in the array is', lastStudent);
+console.log('value of students: ', students);
