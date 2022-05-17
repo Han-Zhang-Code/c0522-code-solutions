@@ -75,6 +75,10 @@ hr {
   width: 60%;
 }
 
+.col-thirteen-twentieth {
+  width: 65%;
+}
+
 .add-padding-80 {
   padding: 80px;
 }
@@ -105,7 +109,7 @@ hr {
   width: 200px;
 }
 
-.locations {
+.backgroundcolor {
   background-color: #fafafa;
   margin-top: 40px;
   padding-top: 40px;
@@ -225,4 +229,65 @@ hr {
   background-color: #fafafa;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.backgroundimg-producthead {
+  background-image:
+    linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 30%)),
+    url("images/product/product-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+
+.adjust-font-color-weight-product {
+  color: white;
+  font-weight: normal;
+  padding-top: 40px;
+}
+
+.adjust-font-color-size-family-product {
+  color: white;
+  line-height: 1.6;
+  font-family: Avenir, sans-serif;
+  font-size: 12px;
+  padding-bottom: 80px;
+}
+
+.product-img-left {
+  width: 100%;
+  padding-right: 80px;
+}
+
+.product-img-right {
+  width: 100%;
+  padding-left: 80px;
+}
+
+.align-item-product {
+  align-items: center;
+}
+
+.add-padding-bottom-product {
+  padding-bottom: 20px;
+}
+
+.add-padding-top-product {
+  padding-top: 40px;
+}
+
+.adjust-font-color-product {
+  color: #909090;
+}
+
+.adjust-font-size {
+  font-size: 13px;
+}
+
+.adjust-font-style-family-weight-product {
+  font-style: italic;
+  font-family:
+    "Tiempos Headline",
+    sans-serif;
+  font-weight: normal;
 }
