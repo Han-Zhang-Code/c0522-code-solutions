@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>practice</title>
+  </head>
+  <body>
+    <script>
+      function getDescriptionOfPerson(person) {
+        return person.name + ' is a ' + person.occupation + ' from ' + person.birthPlace + '.';
+      }
+      var input = {
+        name: 'Ada Lovelace',
+        occupation: 'countess',
+        birthPlace: 'London, England'
+      };
+      console.log(getDescriptionOfPerson(input));
+      function getElementAtIndex(array, index) {
+        return array[index];
+      }
+      console.log(getElementAtIndex([1, 2, 3, 14], 2));
+
+      function getPropertyValue(object, key) {
+        return object[key];
+      }
+      var object = {
+        name: 'Barbara Liskov',
+        occupation: 'computer scientist',
+        birthPlace: 'Los Angeles, California'
+      };
+      var key = 'occupation';
+      console.log(getPropertyValue(object, key));
+      console.log(object.occupation);
+    </script>
+  </body>
+</html>
