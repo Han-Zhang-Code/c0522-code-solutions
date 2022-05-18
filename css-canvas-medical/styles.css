@@ -291,3 +291,48 @@ hr {
     sans-serif;
   font-weight: normal;
 }
+
+.backgroundimg-implementationhead {
+  background-image:
+    linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 30%)),
+    url("images/implementation/implementation-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+
+.adjust-font-family-weight-size-implementation {
+  font-family:
+    "Tiempos Headline",
+    sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+  color: #525351;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.add-margin {
+  margin: auto;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.subtitle-implemenattion {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.font-size-implementation {
+  font-size: 13px;
+  width: 450px;
+  margin-bottom: 30px;
+}
+
+.font-color-implementation {
+  color: #858585;
+}
