@@ -1,0 +1,332 @@
+p {
+  margin: 0;
+  font-family:
+    Avenir,
+    sans-serif;
+}
+
+.container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.justify-content-spacebetween {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img-width {
+  width: 170px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px;
+  font-family: Avenir, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #b7b7b7;
+}
+
+li :hover {
+  color: #294464;
+}
+
+#navbtn {
+  background-color: #294464;
+  color: white;
+  font-size: 15px;
+  font-family:
+    Avenir,
+    sans-serif;
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+hr {
+  position: relative;
+  bottom: 15px;
+  height: 1px;
+  border: 0;
+  background-color: #eaecef;
+}
+
+.backgroundimg {
+  background-image: linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 30%)), url("images/hero.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+
+.add-padding-top-left-bottom {
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.add-more-padding-top-bottom-left {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 80px;
+}
+
+.adjust-font-color-weight {
+  color: white;
+  font-weight: normal;
+}
+
+.adjust-font-color-size-family {
+  color: white;
+  line-height: 1.6;
+  font-family: Avenir, sans-serif;
+  font-size: 15px;
+}
+
+.btn {
+  background-color: #294464;
+  color: white;
+  font-size: larger;
+  font-family:
+    Avenir,
+    sans-serif;
+  border-style: none;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.backgroundcolor {
+  background-color: #fafafa;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.col-one-half {
+  width: 50%;
+}
+
+.add-font-family {
+  font-family:
+    Avenir,
+    sans-serif;
+}
+
+.align-content-center {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 60px;
+}
+
+.add-padding-left {
+  padding-left: 80px;
+}
+
+.adjust-heading-font-color-size-family-weight {
+  margin-bottom: 15px;
+  color: #858585;
+  font-size: 25px;
+  font-weight: normal;
+  font-family:
+    "Tiempos Headline",
+    sans-serif;
+}
+
+.adjust-subheading-color-line-height {
+  line-height: 1.6;
+  color: #909090;
+}
+
+.adjust-font-weight-size-color-position {
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 10px;
+  color: #909090;
+}
+
+.learn-more {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  align-items: flex-start;
+}
+
+.align-content-left > h3 {
+  color: #858585;
+  font-size: 25px;
+  font-weight: normal;
+  font-family:
+    "Tiempos Headline",
+    sans-serif;
+}
+
+.align-content-left > p {
+  color: #858585;
+  font-size: 13px;
+}
+
+.align-content-right {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.btn-right {
+  background-color: #294464;
+  color: white;
+  font-size: larger;
+  border-style: none;
+  padding: 15px;
+  margin-top: 30px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.footer {
+  background-color: #525351;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 1.6;
+}
+
+.adjust-image-width-margin {
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+.right-content {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  line-height: 2;
+}
+
+.links {
+  background-color: #fafafa;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.backgroundimg-producthead {
+  background-image:
+    linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 30%)),
+    url("images/product/product-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+
+.adjust-font-color-weight-product {
+  color: white;
+  font-weight: normal;
+  padding-top: 40px;
+}
+
+.adjust-font-color-size-family-product {
+  color: white;
+  line-height: 1.6;
+  font-family: Avenir, sans-serif;
+  font-size: 12px;
+  padding-bottom: 80px;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.add-padding-right-80px {
+  padding-right: 80px;
+}
+
+.align-item-product {
+  align-items: center;
+}
+
+.add-padding-bottom-product {
+  padding-bottom: 20px;
+}
+
+.add-padding-top-product {
+  padding-top: 40px;
+}
+
+.adjust-font-color-product {
+  color: #909090;
+}
+
+.adjust-font-size {
+  font-size: 13px;
+}
+
+.adjust-font-style-family-weight-product {
+  font-style: italic;
+  font-family:
+    "Tiempos Headline",
+    sans-serif;
+  font-weight: normal;
+}
+
+.backgroundimg-implementationhead {
+  background-image:
+    linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 30%)),
+    url("images/implementation/implementation-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+
+.adjust-font-family-weight-size-implementation {
+  font-family:
+    "Tiempos Headline",
+    sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+  color: #525351;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.add-margin {
+  margin: auto;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.subtitle-implemenattion {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.font-size-implementation {
+  font-size: 13px;
+  width: 450px;
+  margin-bottom: 30px;
+}
+
+.font-color-implementation {
+  color: #858585;
+}
