@@ -7,8 +7,7 @@ return new array
 */
 function getKeys(object) {
   var array = [];
-  var keys;
-  for (keys in object) {
+  for (var keys in object) {
     array.push(keys);
   }
   return array;
