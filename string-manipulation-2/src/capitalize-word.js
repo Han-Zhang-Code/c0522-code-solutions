@@ -7,31 +7,31 @@ if the result equals to Javascript, assign JavaScript to the new string variable
 return the new string variable
 
 */
-// function capitalizeWord(word) {
-//   var newWord = '';
-//   newWord = word[0].toUpperCase();
-//   for (var i = 1; i < word.length; i++) {
-//     newWord += word[i].toLowerCase();
-//   }
-//   if (newWord.toLowerCase() === 'javascript') {
-//     newWord = 'JavaScript';
-//   }
-
-//   return newWord;
-// }
-
 function capitalizeWord(word) {
   var newWord = '';
   newWord = word[0].toUpperCase();
   for (var i = 1; i < word.length; i++) {
     newWord += word[i].toLowerCase();
   }
-  if (newWord === 'Javascript') {
-    var temp = newWord.split('');
-    temp[4] = 'S';
-    return temp.join('');
-
+  if (newWord.toLowerCase() === 'javascript') {
+    newWord = 'JavaScript';
   }
 
   return newWord;
 }
+
+// function capitalizeWord(word) {
+//   var newWord = '';
+//   newWord = word[0].toUpperCase();
+//   for (var i = 1; i < word.length; i++) {
+//     newWord += word[i].toLowerCase();
+//   }
+//   if (newWord === 'Javascript') {
+//     var temp = newWord.split('');
+//     temp[4] = 'S';
+//     return temp.join('');
+
+//   }
+
+//   return newWord;
+// }
