@@ -9,24 +9,37 @@ declare new array variable
  push the array into the final array variable backwards
  return to the final array
 */
+// function takeRight(array, count) {
+//   var newArray = [];
+//   if (array.length < count) {
+//     for (var a = 0; a < array.length; a++) {
+//       newArray.push(array[a]);
+//     }
+//     return newArray;
+//   }
+//   for (var i = array.length - 1; i >= 0; i--) {
+//     newArray.push(array[i]);
+//   }
+//   var countArray = [];
+//   for (var j = 0; j < count; j++) {
+//     countArray.push(newArray[j]);
+//   }
+//   var finalArray = [];
+//   for (var k = countArray.length - 1; k >= 0; k--) {
+//     finalArray.push(countArray[k]);
+//   }
+//   return finalArray;
+// }
 function takeRight(array, count) {
   var newArray = [];
-  if (array.length < count) {
+  if (count > array.length) {
     for (var a = 0; a < array.length; a++) {
       newArray.push(array[a]);
     }
     return newArray;
   }
-  for (var i = array.length - 1; i >= 0; i--) {
+  for (var i = array.length - count; i < array.length; i++) {
     newArray.push(array[i]);
   }
-  var countArray = [];
-  for (var j = 0; j < count; j++) {
-    countArray.push(newArray[j]);
-  }
-  var finalArray = [];
-  for (var k = countArray.length - 1; k >= 0; k--) {
-    finalArray.push(countArray[k]);
-  }
-  return finalArray;
+  return newArray;
 }
