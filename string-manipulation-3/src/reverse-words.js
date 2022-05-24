@@ -1,4 +1,9 @@
 /* exported reverseWords */
+/*
+use split method split string to letter array, then reverse the array and convert to string
+after that use split method split the string to word array, reverse the word array and use join methd to convert to string
+
+*/
 function reverseWords(string) {
   var newString = string.split('');
   var reversedString = '';

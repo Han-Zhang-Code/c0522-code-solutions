@@ -1,4 +1,11 @@
 /* exported titleCase */
+/*
+declare a new string, make the first letter to uppcase and return to new string
+use for loop to iterate through array start with index 1, and make the next index letter lower case
+if the index at the value ' ' or '-', make it to uppercase and increment the index
+at this point all String should be capitalized, use split method to convert the string to word array
+and iterate through array use if-else statement to handle special cases
+*/
 function titleCase(title) {
   var newString = '';
   newString = title[0].toUpperCase();
