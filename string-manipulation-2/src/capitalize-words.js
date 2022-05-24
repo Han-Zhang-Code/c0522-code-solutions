@@ -7,26 +7,26 @@ use join() method to convert array into string seprate by a space
 return to the new string
 */
 
-function capitalizeWords(string) {
-  var newString = string.toLowerCase();
-  newString = newString.split(' ');
-  for (var i = 0; i < newString.length; i++) {
-    newString[i] = newString[i][0].toUpperCase() + newString[i].substring(1);
-  }
-  return newString.join(' ');
-
-}
-
 // function capitalizeWords(string) {
-//   var newString = '';
-//   newString = string.toLowerCase();
-//   newString = string[0].toUpperCase();
-//   for (var i = 1; i < string.length; i++) {
-//     if (string[i] === ' ') {
-//       string[i + 1] = string[i + 1].toUpperCase();
-//       newString += string[i]
-//     }
+//   var newString = string.toLowerCase();
+//   newString = newString.split(' ');
+//   for (var i = 0; i < newString.length; i++) {
+//     newString[i] = newString[i][0].toUpperCase() + newString[i].substring(1);
 //   }
-//   return newString;
+//   return newString.join(' ');
+
 // }
-// still dont know what I did worng, gonna figure it out tommorrow
+
+function capitalizeWords(string) {
+  var newString = '';
+  newString = string[0].toUpperCase();
+  for (var i = 1; i < string.length; i++) {
+    newString += string[i].toLowerCase();
+
+    if (string[i] === ' ') {
+      newString += string[i + 1].toUpperCase();
+      i++;
+    }
+  }
+  return newString;
+}
