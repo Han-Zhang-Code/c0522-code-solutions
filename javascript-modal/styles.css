@@ -9,8 +9,8 @@
   box-shadow: 2px 2px 2px black;
 }
 
-.modal {
-  display: flex;
+.modal-hide {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -19,8 +19,8 @@
   background-color: rgb(50 50 50 / 90%);
 }
 
-.modal-hide {
-  display: none;
+.modal {
+  display: flex;
   position: fixed;
   left: 0;
   top: 0;

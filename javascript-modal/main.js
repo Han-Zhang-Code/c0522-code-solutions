@@ -1,11 +1,11 @@
 var $openButton = document.querySelector('.blue-button');
 var $closeButton = document.querySelector('.close-button');
-var $opensaseme = document.querySelector('.modal');
-function opensaseme() {
-  $opensaseme.className = 'modal';
+var $openModal = document.querySelector('.modal');
+function openModal() {
+  $openModal.className = 'modal';
 }
-function closesaseme() {
-  $opensaseme.className = 'modal-hide';
+function closeModal() {
+  $openModal.className = 'modal-hide';
 }
-$openButton.addEventListener('click', opensaseme);
-$closeButton.addEventListener('click', closesaseme);
+$openButton.addEventListener('click', openModal);
+$closeButton.addEventListener('click', closeModal);
