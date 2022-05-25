@@ -1,0 +1,31 @@
+.center-text {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+p {
+  font-size: 40px;
+  font-family:
+    "Baloo 2",
+    cursive;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.make-green {
+  color: greenyellow;
+}
+
+.make-red {
+  color: red;
+}
+
+.add-underline {
+  text-decoration: underline;
+}
