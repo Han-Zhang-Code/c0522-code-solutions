@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-day {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #faea84;
+}
+
+.background-day {
+  background-color: #f8f9f1;
+}
+
+.circle-night {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #252525;
+}
+
+.background-night {
+  background-color: #111;
+}
