@@ -85,4 +85,6 @@ function renderPokemon(pokemon) {
 
   return $appendtoRow;
 }
-renderPokemon(pokedex[0]);
+for (var i = 0; i < pokedex.length; i++) {
+  renderPokemon(pokedex[i]);
+}
