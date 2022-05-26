@@ -58,33 +58,66 @@ var pokedex = [
 ];
 
 function renderPokemon(pokemon) {
-  var $appendtoRow = document.querySelector('.row');
-  $appendtoRow.appendChild(document.createElement('div')).setAttribute('class', 'column-third');
-  // var $appendtoColumn = document.querySelectorAll('.column-third:last-child');
-  var $appendtoColumn = Array.from(
-    document.querySelectorAll('.column-third')
-  ).pop();
-  $appendtoColumn.appendChild(document.createElement('div')).setAttribute('class', 'pokemon-card');
-  // var $appendtoPokemon = document.querySelectorAll('.pokemon-card:last-child');
-  var $appendtoPokemon = Array.from(
-    document.querySelectorAll('.pokemon-card')
-  ).pop();
-  $appendtoPokemon.appendChild(document.createElement('img')).setAttribute('src', pokemon.imageUrl);
-  // var $setChildDiv = document.querySelectorAll('.pokemon-card:last-child');
-  var $setChildDiv = Array.from(
-    document.querySelectorAll('.pokemon-card')
-  ).pop();
-  $setChildDiv.appendChild(document.createElement('div')).setAttribute('class', 'pokemon-card-text');
-  // var $appendtoCardText = document.querySelector('.pokemon-card-text');
-  var $appendtoCardText = Array.from(
-    document.querySelectorAll('.pokemon-card-text')
-  ).pop();
-  $appendtoCardText.appendChild(document.createElement('h2')).textContent = pokemon.name;
-  $appendtoCardText.appendChild(document.createElement('h3')).textContent = pokemon.number;
-  $appendtoCardText.appendChild(document.createElement('p')).textContent = pokemon.description;
+  // var $appendtoRow = document.querySelector('.row');
+  // $appendtoRow.appendChild(document.createElement('div')).setAttribute('class', 'column-third');
+  // // var $appendtoColumn = document.querySelectorAll('.column-third:last-child');
+  // var $appendtoColumn = Array.from(
+  //   document.querySelectorAll('.column-third')
+  // ).pop();
+  // $appendtoColumn.appendChild(document.createElement('div')).setAttribute('class', 'pokemon-card');
+  // // var $appendtoPokemon = document.querySelectorAll('.pokemon-card:last-child');
+  // var $appendtoPokemon = Array.from(
+  //   document.querySelectorAll('.pokemon-card')
+  // ).pop();
+  // $appendtoPokemon.appendChild(document.createElement('img')).setAttribute('src', pokemon.imageUrl);
+  // // var $setChildDiv = document.querySelectorAll('.pokemon-card:last-child');
+  // var $setChildDiv = Array.from(
+  //   document.querySelectorAll('.pokemon-card')
+  // ).pop();
+  // $setChildDiv.appendChild(document.createElement('div')).setAttribute('class', 'pokemon-card-text');
+  // // var $appendtoCardText = document.querySelector('.pokemon-card-text');
+  // var $appendtoCardText = Array.from(
+  //   document.querySelectorAll('.pokemon-card-text')
+  // ).pop();
+  // $appendtoCardText.appendChild(document.createElement('h2')).textContent = pokemon.name;
+  // $appendtoCardText.appendChild(document.createElement('h3')).textContent = pokemon.number;
+  // $appendtoCardText.appendChild(document.createElement('p')).textContent = pokemon.description;
 
-  return $appendtoRow;
+  // return $appendtoRow;
+  var $createColumn = document.createElement('div');
+  $createColumn.setAttribute('class', 'column-third');
+
+  var $createCard = document.createElement('div');
+  $createCard.setAttribute('class', 'pokemon-card');
+
+  var $createImg = document.createElement('img');
+  $createImg.setAttribute('src', pokemon.imageUrl);
+
+  var $createText = document.createElement('div');
+  $createText.setAttribute('class', 'pokemon-card-text');
+
+  var $setName = document.createElement('h2');
+  $setName.textContent = pokemon.name;
+
+  var $setNumber = document.createElement('h3');
+  $setNumber.textContent = pokemon.number;
+
+  var $setContent = document.createElement('p');
+  $setContent.textContent = pokemon.description;
+
+  $createColumn.appendChild($createCard);
+  $createCard.appendChild($createImg);
+  $createCard.appendChild($createText);
+  $createText.appendChild($setName);
+  $createText.appendChild($setNumber);
+  $createText.appendChild($setContent);
+  return $createColumn;
 }
+// for (var i = 0; i < pokedex.length; i++) {
+//   renderPokemon(pokedex[i]);
+// }
+var $selectRow = document.querySelector('.row');
 for (var i = 0; i < pokedex.length; i++) {
-  renderPokemon(pokedex[i]);
+  var $pokemons = renderPokemon(pokedex[i]);
+  $selectRow.appendChild($pokemons);
 }
