@@ -100,7 +100,7 @@ function renderPokemon(pokemon) {
   $setName.textContent = pokemon.name;
 
   var $setNumber = document.createElement('h3');
-  $setNumber.textContent = pokemon.number;
+  $setNumber.textContent = '#' + pokemon.number;
 
   var $setContent = document.createElement('p');
   $setContent.textContent = pokemon.description;
