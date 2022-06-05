@@ -3,7 +3,7 @@ var count = 0;
 function keyIn(event) {
   var $keyIn = document.querySelectorAll('span');
   var $count = document.querySelector('.accuracy');
-  if ((event.key === $keyIn[currentIndex].outerText && currentIndex < $keyIn.length - 1) || (event.key === ' ' && $keyIn[currentIndex].innerHTML === '&nbsp;')) {
+  if ((event.key === $keyIn[currentIndex].outerText && currentIndex < $keyIn.length - 1)) {
     $keyIn[currentIndex].className = 'make-green';
     $keyIn[currentIndex + 1].className = 'add-underline';
     currentIndex++;
