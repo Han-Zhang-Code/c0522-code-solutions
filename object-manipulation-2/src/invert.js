@@ -16,10 +16,6 @@ convert the resulting array to object using Object.fromEntries method
 // }
 function invert(source) {
   var newObject = {};
-  // for (var keys in source) {
-  //   keys = source[keys];
-  //   newObject[keys] = keys;
-  // }
   for (var keys in source) {
     newObject[source[keys]] = keys;
   }
