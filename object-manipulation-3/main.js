@@ -25,10 +25,15 @@ for (var i = 0; i < suit.length; i++) {
 console.log(cardDeck);
 var shuffled = _.shuffle(cardDeck);
 
+console.log(players);
 for (var a = 0; a < players.length; a++) {
+  for (var b = 0; b < 2; b++) {
+    players[a].hand.push(shuffled.pop());
+  }
+}
 
-  players[a].hand.push(shuffled.pop());
-  players[a].hand.push(shuffled.pop());
-
+for (var d = 0; d < players.length; d++) {
+  // sum.push(players[i].hand[0].rank + players[i].hand[1].rank);
+  players[d].sums = players[d].hand[0].rank + players[d].hand[1].rank;
 }
 console.log(players);
