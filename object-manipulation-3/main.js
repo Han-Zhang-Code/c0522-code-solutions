@@ -25,7 +25,6 @@ for (var i = 0; i < suit.length; i++) {
 console.log(cardDeck);
 var shuffled = _.shuffle(cardDeck);
 
-console.log(players);
 for (var a = 0; a < players.length; a++) {
   for (var b = 0; b < 2; b++) {
     players[a].hand.push(shuffled.pop());
@@ -33,7 +32,13 @@ for (var a = 0; a < players.length; a++) {
 }
 
 for (var d = 0; d < players.length; d++) {
-  // sum.push(players[i].hand[0].rank + players[i].hand[1].rank);
+  for (var c = 0; c < players[d].hand.length; c++) {
+    if (players[d].hand[c].rank === 'Ace') {
+      players[d].hand[c].rank = 11;
+    } else if (players[d].hand[c].rank === 'Jack' || players[d].hand[c].rank === 'Queen' || players[d].hand[c].rank === 'King') {
+      players[d].hand[c].rank = 10;
+    }
+  }
   players[d].sums = players[d].hand[0].rank + players[d].hand[1].rank;
 }
 console.log(players);
