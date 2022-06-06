@@ -24,6 +24,11 @@ for (var i = 0; i < suit.length; i++) {
 }
 console.log(cardDeck);
 var shuffled = _.shuffle(cardDeck);
-console.log(shuffled);
-console.log(_.shuffle([1, 2, 3, 4]));
+
+for (var a = 0; a < players.length; a++) {
+
+  players[a].hand.push(shuffled.pop());
+  players[a].hand.push(shuffled.pop());
+
+}
 console.log(players);
