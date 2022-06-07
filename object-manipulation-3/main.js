@@ -12,6 +12,7 @@ var players = [{
   name: 'Nathan',
   hand: []
 }];
+console.log('Players: ', players);
 
 var suit = ['clubs', 'diamonds', 'hearts', 'spades'];
 var rank = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
@@ -22,8 +23,10 @@ for (var i = 0; i < suit.length; i++) {
     cardDeck.push(card);
   }
 }
-console.log(cardDeck);
+
+console.log('Card Deck: ', cardDeck);
 var shuffled = _.shuffle(cardDeck);
+console.log('shuffled Card Deck:', shuffled);
 
 for (var a = 0; a < players.length; a++) {
   for (var b = 0; b < 2; b++) {
@@ -39,6 +42,24 @@ for (var d = 0; d < players.length; d++) {
       players[d].hand[c].rank = 10;
     }
   }
-  players[d].sums = players[d].hand[0].rank + players[d].hand[1].rank;
+  var sum = 0;
+  for (var e = 0; e < players[d].hand.length; e++) {
+    sum += players[d].hand[e].rank;
+    players[d].sums = sum;
+  }
 }
-console.log(players);
+
+var scores = [];
+for (var f = 0; f < players.length; f++) {
+  scores.push(players[f].sums);
+}
+var maxScore = _.max(scores);
+for (var g = 0; g < players.length; g++) {
+  if (players[g].sums === maxScore) {
+    console.log('the Winner is:', players[g].name);
+  }
+}
+
+for (var h = 0; h < players.length; h++) {
+  delete players[h].sums;
+}
