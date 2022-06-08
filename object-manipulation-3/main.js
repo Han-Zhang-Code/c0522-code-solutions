@@ -9,19 +9,6 @@ find the max sum and find who has that max sum, whoever has that max sum is the 
 */
 function cardGame(players, cards) {
   console.log('Lodash is loaded:', typeof _ !== 'undefined');
-  // var players = [{
-  //   name: 'Han',
-  //   hand: []
-  // }, {
-  //   name: 'James',
-  //   hand: []
-  // }, {
-  //   name: 'Tim',
-  //   hand: []
-  // }, {
-  //   name: 'Nathan',
-  //   hand: []
-  // }];
 
   var suit = ['clubs', 'diamonds', 'hearts', 'spades'];
   var rank = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
@@ -63,10 +50,16 @@ function cardGame(players, cards) {
     scores.push(players[f].sums);
   }
   var maxScore = _.max(scores);
+  var winners = [];
   for (var g = 0; g < players.length; g++) {
     if (players[g].sums === maxScore) {
       console.log('the Winner is:', players[g].name);
+      winners.push(players[g]);
     }
+  }
+  console.log(winners);
+  if (winners.length > 1) {
+    cardGame(winners, cards);
   }
 
   for (var h = 0; h < players.length; h++) {
@@ -86,4 +79,4 @@ cardGame([{
 }, {
   name: 'Nathan',
   hand: []
-}], 3);
+}], 2);
