@@ -57,7 +57,6 @@ function cardGame(players, cards) {
       winners.push(players[g]);
     }
   }
-  console.log(winners);
   if (winners.length > 1) {
     cardGame(winners, cards);
   }
@@ -79,4 +78,4 @@ cardGame([{
 }, {
   name: 'Nathan',
   hand: []
-}], 2);
+}], 4);
