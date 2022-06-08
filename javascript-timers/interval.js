@@ -1,8 +1,7 @@
 var $countdown = document.querySelector('.countdown-display');
+var count = 4;
 function countdownDisplay() {
-  var string = $countdown.textContent;
-  var int = parseInt(string);
-  $countdown.textContent = int - 1;
+  $countdown.innerHTML = count--;
   if ($countdown.textContent === '0') {
     $countdown.textContent = '~Earth BeeeelooowwwUs~';
   }
@@ -10,9 +9,7 @@ function countdownDisplay() {
     clearInterval(timerId);
   }
 }
-
 var timerId;
-
 if (!timerId) {
   timerId = setInterval(countdownDisplay, 1000);
 }
