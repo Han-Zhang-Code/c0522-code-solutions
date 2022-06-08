@@ -1,3 +1,13 @@
+/*
+declare new array called players, at each array value is an object with two property: name and hand, initialize the name and initialize the hand to empty array
+declare new array with four suits, declare other array with 13 ranks, and declare an empty array to hold the carddeck
+loop through both array and inside the loop declare a card object virable with two properties: suit and rank, assign both array value accordingly to the card variable,
+after that, push the card into the cardDeck, and use shuffle method in Lodash to shuffl the card deck
+loop through the player array and use pop and push method to deal each player a card, use pop and push method again to deal each player two card.
+convert Ace, J,Q,K to numbers, calculate the sum and assign to each player object as the third property
+find the max sum and find who has that max sum, whoever has that max sum is the winner
+*/
+
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 var players = [{
   name: 'Han',
