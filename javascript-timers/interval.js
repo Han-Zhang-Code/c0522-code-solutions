@@ -4,8 +4,6 @@ function countdownDisplay() {
   $countdown.innerHTML = count--;
   if ($countdown.textContent === '0') {
     $countdown.textContent = '~Earth BeeeelooowwwUs~';
-  }
-  if ($countdown.textContent === '~Earth BeeeelooowwwUs~') {
     clearInterval(timerId);
   }
 }
