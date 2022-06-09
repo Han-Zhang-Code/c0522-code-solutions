@@ -25,3 +25,7 @@
 .add-border {
   border: 3px solid;
 }
+
+.hidden {
+  display: none !important;
+}
