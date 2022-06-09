@@ -5,15 +5,24 @@ $circles.addEventListener('click', selected);
 function selected(event) {
   clearInterval(intervalID);
   intervalID = setInterval(carousel, 3000);
-  var $dataview = event.target.getAttribute('data-view');
-  for (var i = 0; i < $circle.length; i++) {
-    if ($circle[i].getAttribute('data-view') === $dataview) {
-      $circle[i].className = 'fas fa-circle add-padding-5 circle';
-      $views[i].className = 'view';
-    } else if ($circle[i].getAttribute('data-view') !== $dataview) {
-      $circle[i].className = 'far fa-circle add-padding-5 circle';
-      $views[i].className = 'view hidden';
-    }
+  // var $dataview = event.target.getAttribute('data-view');
+  // if (event.target.matches('i')) {
+  //   for (var i = 0; i < $circle.length; i++) {
+  //     if ($circle[i].getAttribute('data-view') === $dataview) {
+  //       $circle[i].className = 'fas fa-circle add-padding-5 circle';
+  //       $views[i].className = 'view';
+  //     } else if ($circle[i].getAttribute('data-view') !== $dataview) {
+  //       $circle[i].className = 'far fa-circle add-padding-5 circle';
+  //       $views[i].className = 'view hidden';
+  //     }
+  //   }
+  // }
+  if (event.target.matches('i')) {
+    $circle[count].className = 'far fa-circle add-padding-5 circle';
+    $views[count].className = 'view hidden';
+    count = event.target.getAttribute('data-id') - 1;
+    $circle[count].className = 'fas fa-circle add-padding-5 circle';
+    $views[count].className = 'view';
   }
 }
 var $arrowRight = document.querySelector('.fa-chevron-right');
