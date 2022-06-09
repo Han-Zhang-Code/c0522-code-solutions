@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container add-border" >
+    <div class="row adjust-content">
+      <i class="fas fa-chevron-left fa-3x add-padding-100" ></i>
+      <img src="images/001.png" alt="001.png" class="view">
+      <img src="images/004.png" alt="004.png" class="view hidden">
+      <img src="images/007.png" alt="007.png" class="view hidden">
+      <img src="images/025.png" alt="025.png" class="view hidden">
+      <img src="images/039.png" alt="039.png" class="view hidden">
+      <i class="fas fa-chevron-right fa-3x add-padding-100" ></i>
+    </div>
+    <div class="row adjust-content circles">
+      <i class="fas fa-circle add-padding-5 circle" data-view="bulbasaur" data-id="1"></i>
+      <i class="far fa-circle add-padding-5 circle" data-view="charmander" data-id="2"></i>
+      <i class="far fa-circle add-padding-5 circle" data-view="squirtle" data-id="3"></i>
+      <i class="far fa-circle add-padding-5 circle" data-view="pikachu" data-id="4"></i>
+      <i class="far fa-circle add-padding-5 circle" data-view="jigglypuff" data-id="5"></i>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.adjust-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.add-padding-100 {
+  padding: 100px;
+}
+
+.add-padding-5 {
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+.add-border {
+  border: 3px solid;
+}
+
+.hidden {
+  display: none !important;
+}
