@@ -13,7 +13,6 @@ if (process.argv[2] === 'read') {
   });
 } else if (process.argv[2] === 'delete') {
   delete notes.notes[process.argv[3]];
-  notes.nextId--;
   newNotes = JSON.stringify(notes, null, 2);
   fs.writeFile('data.json', newNotes, err => {
     if (err) throw err;
