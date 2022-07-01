@@ -1,0 +1,21 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "for practice",
+  "main": "1",
+  "scripts": {
+    "test": "??"
+  },
+  "repository": {
+    "type": "git",
+    "url": "c0522-code-solutions"
+  },
+  "keywords": [
+    "npm-intrp"
+  ],
+  "author": "yuhan",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
