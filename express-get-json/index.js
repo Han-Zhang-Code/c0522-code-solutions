@@ -20,9 +20,10 @@ var grades = {
     score: 92
   }
 };
-var temp = [];
+
 app.listen(3000);
 app.get('/api/grades', (req, res) => {
+  var temp = [];
   for (var k in grades) {
     temp.push(grades[k]);
   }
