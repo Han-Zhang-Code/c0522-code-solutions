@@ -32,11 +32,14 @@ app.post('/api/notes', (req, res) => {
     notes.notes[newNotes.id] = newNotes;
     var JSONNotes = JSON.stringify(notes, null, 2);
     fs.writeFile('data.json', JSONNotes, err => {
-      console.error(err);
-      res.status(500).end();
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'an unexpected error occurred' });
+      } else {
+        res.status(201).json(newNotes);
+      }
     });
-    res.status(201);
-    res.json(newNotes);
+
   } else {
     var notFoundMessage = { error: 'content is a required field' };
     res.status(400).send(notFoundMessage);
@@ -77,10 +80,13 @@ app.put('/api/notes/:id', (req, res) => {
     notes.notes[newNotes.id] = newNotes;
     var JSONNotes = JSON.stringify(notes, null, 2);
     fs.writeFile('data.json', JSONNotes, err => {
-      console.error(err);
-      res.status(500).end();
+      if (err) {
+        console.error(err);
+        res.status(500).end();
+      } else {
+        res.status(200).json(newNotes);
+      }
     });
-    res.status(200);
-    res.json(newNotes);
+
   }
 });
