@@ -55,11 +55,14 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(404).send(notFoundMessage);
   } else {
     delete notes.notes[id];
-    res.status(204).end();
     var JSONNotes = JSON.stringify(notes, null, 2);
     fs.writeFile('data.json', JSONNotes, err => {
-      console.error(err);
-      res.status(500).end();
+      if (err) {
+        console.error(err);
+        res.status(500).end();
+      } else {
+        res.status(204).end();
+      }
     });
   }
 });
