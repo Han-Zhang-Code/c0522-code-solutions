@@ -1,8 +1,7 @@
 function filter(array, predicate) {
   var newArray = [];
   for (var i = 0; i < array.length; i++) {
-    var result = predicate(array[i]);
-    if (result) {
+    if (predicate(array[i])) {
       newArray.push(array[i]);
     }
   }
