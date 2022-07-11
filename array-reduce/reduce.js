@@ -1,5 +1,9 @@
 function reduce(array, reducer, initialValue) {
-  var previous = initialValue;
+  if (initialValue !== undefined) {
+    var previous = initialValue;
+  } else {
+    previous = array[0];
+  }
   for (var i = 0; i < array.length; i++) {
     previous = reducer(previous, array[i]);
   }
