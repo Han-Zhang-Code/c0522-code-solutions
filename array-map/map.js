@@ -1,7 +1,7 @@
 function map(array, transform) {
   var newArray = [];
   for (var i = 0; i < array.length; i++) {
-    newArray.push(transform(array[i]));
+    newArray.push(transform(array[i], i, array));
   }
   return newArray;
 }
