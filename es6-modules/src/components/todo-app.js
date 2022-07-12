@@ -52,4 +52,4 @@ class TodoApp {
   }
 }
 
-export { TodoApp };
+export default TodoApp;
