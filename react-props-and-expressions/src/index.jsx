@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 function CustomButton(props) {
   return (<button>{props.text}</button>);
 }
+
 const element = (
   <div>
     <CustomButton text="I" />
