@@ -25,6 +25,7 @@
   border: 2.5px solid;
   border-radius: 60px;
   position: relative;
+  transition: 0.5s;
 }
 
 .inner-off {
@@ -35,27 +36,18 @@
   border: 2.5px solid;
   position: absolute;
   left: 0;
+  transition: 0.5s;
 }
 
 .outer-off.on {
   background-color: #6aa84f;
-
-  /* height: 34px;
-  display: inline-block;
-  width: 60px;
-  border: 2.5px solid;
-  border-radius: 60px;
-  position: relative; */
+  transition: 0.5s;
 }
 
 .inner-off.on {
-  /* background-color: white;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 2.5px solid;
-  position: absolute; */
   right: 0 !important;
+  left: initial;
+  transition: 0.5s;
 }
 
 *:hover {
