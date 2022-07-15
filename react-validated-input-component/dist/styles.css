@@ -1,0 +1,29 @@
+.passwordarea {
+  border: 1px solid;
+  height: 25px;
+  width: 150px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.errormessage {
+  color: #e03629;
+  font-size: 13px;
+}
+
+.font-wrong-adjust {
+  font-size: 30px;
+  color: red;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.font-right-adjust {
+  font-size: 30px;
+  color: green;
+  margin-left: 10px;
+}
