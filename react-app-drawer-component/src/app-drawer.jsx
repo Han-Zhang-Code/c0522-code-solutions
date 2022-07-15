@@ -11,10 +11,6 @@ class AppDrawer extends React.Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
 
-  handleBackground() {
-    this.setState({ backgroundOpen: !this.state.backgroundOpen });
-  }
-
   render() {
     let background = '';
     let iconClass = 'fa-solid fa-bars font-size';
@@ -24,18 +20,23 @@ class AppDrawer extends React.Component {
       iconClass = 'hidden';
       menuContainer = 'menu-container';
     }
+
     return (
-      <div onClick={this.handleBackground} className={background}>
-        <div>
-          <i onClick={this.handleClick} className={iconClass}></i>
-        </div>
-        <div className={menuContainer}>
-          <ul className='row'>
-            <li className='list-head'>menu</li>
-            <li>about us</li>
-          </ul>
-        </div>
+     <div>
+      <div onClick={this.handleClick} className={background}></div>
+      <div>
+        <i onClick={this.handleClick} className={iconClass}></i>
       </div>
+      <div className={menuContainer}>
+        <ul className='row' >
+          <li className='list-head'>Menu</li>
+            <li className='hover' onClick={this.handleClick}>About</li>
+            <li className='hover' onClick={this.handleClick}>Get Started</li>
+            <li className='hover' onClick={this.handleClick}>Sign In</li>
+        </ul>
+      </div>
+    </div>
+
     );
   }
 }
