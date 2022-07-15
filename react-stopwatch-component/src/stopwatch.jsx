@@ -25,7 +25,9 @@ class Stopwatch extends React.Component {
   }
 
   resetTimer() {
-    this.setState({ timeCounter: 0 });
+    if (!this.state.isTicking) {
+      this.setState({ timeCounter: 0 });
+    }
   }
 
   render() {
