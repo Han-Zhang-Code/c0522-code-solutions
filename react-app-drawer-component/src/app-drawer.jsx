@@ -3,12 +3,16 @@ import React from 'react';
 class AppDrawer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
+    this.state = { isOpen: false, backgroundOpen: false };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  handleBackground() {
+    this.setState({ backgroundOpen: !this.state.backgroundOpen });
   }
 
   render() {
@@ -21,7 +25,7 @@ class AppDrawer extends React.Component {
       menuContainer = 'menu-container';
     }
     return (
-      <div onClick={this.handleClick} className={background}>
+      <div onClick={this.handleBackground} className={background}>
         <div>
           <i onClick={this.handleClick} className={iconClass}></i>
         </div>
