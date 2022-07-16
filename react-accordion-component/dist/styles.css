@@ -1,0 +1,27 @@
+.topics {
+  list-style-type: none;
+  border: 2px solid;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+  margin-top: 1px;
+  background-color: #ddd;
+}
+
+.topics:hover {
+  cursor: pointer;
+}
+
+.details {
+  list-style-type: none;
+  border: 2px solid;
+  width: 200px;
+  height: 100px;
+  margin: auto;
+  padding: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
