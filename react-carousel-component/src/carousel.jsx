@@ -12,7 +12,7 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div></div>
+      <div><img src={this.props.images[0]} alt="" /></div>
     );
   }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "buildwatch": "webpack --watch --mode=development --stats=minimal --devtool=source-map"
+    "watch": "webpack --watch --mode=development --stats=minimal --devtool=source-map"
   },
   "keywords": [],
   "author": "",
