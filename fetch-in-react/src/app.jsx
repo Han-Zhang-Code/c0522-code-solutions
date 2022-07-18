@@ -33,16 +33,15 @@ class App extends React.Component {
 //         'https://jsonplaceholder.typicode.com/users',
 //       );
 //       const json = await res.json();
-//       setData(json.hits);
+//       setUser(json);
+//       setloading(false)
 //     };
 //     fetchData();
-//   }, [setData]);
+//   }, [setUser]);
 
 //   return (loading
 //     ? <p>Loading...</p>
 //     : <UserList users={user} />);
-// }
-
 // }
 
 export default App;
