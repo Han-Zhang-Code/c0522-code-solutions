@@ -3,15 +3,17 @@ import React, { useState, useEffect } from 'react';
 function Carousel(props) {
   const [isClicked, setIsClicked] = useState(0);
   const Arraylength = props.images.length;
+
+  const onClickFnIcon = index => {
+    setIsClicked(prestate => {
+      clearInterval(intervalID);
+      carousal();
+      return index;
+    });
+  };
   const icons = props.images.map((icon, index) => {
-    const onClickFn = index => {
-      setIsClicked(prestate => {
-        clearInterval(intervalID);
-        carousal();
-        return index;
-      });
-    };
-    return <i key={index} className={isClicked === index ? 'fa-solid fa-circle icon-adjust' : 'fa-regular fa-circle icon-adjust'} onClick={() => { onClickFn(index); }}></i>;
+    return <i key={index} className={isClicked === index ? 'fa-solid fa-circle icon-adjust' : 'fa-regular fa-circle icon-adjust'}
+    onClick={() => { onClickFnIcon(index); }}></i>;
   });
 
   let intervalID;
@@ -39,53 +41,46 @@ function Carousel(props) {
     );
   };
 
+  const onClickFnLeft = index => {
+    clearInterval(intervalID);
+    carousal();
+    setIsClicked(prestate => {
+      prestate--;
+      if (prestate === -1) {
+        prestate = Arraylength - 1;
+      }
+      return prestate;
+    });
+  };
   const LeftChevron = ({ index, isClicked, setIsClicked }) => {
-    const onClickFn = index => {
-      clearInterval(intervalID);
-      carousal();
-      setIsClicked(prestate => {
-        prestate--;
-        if (prestate === -1) {
-          prestate = Arraylength - 1;
-        }
-        return prestate;
-      });
-    };
-    return <i className={isClicked === index ? 'fa-solid fa-chevron-left chevron-adjust' : 'hidden'} onClick={() => { onClickFn(index); }}></i>;
+    return <i className={isClicked === index ? 'fa-solid fa-chevron-left chevron-adjust' : 'hidden'} onClick={() => { onClickFnLeft(index); }}></i>;
   };
 
+  const onClickFnRight = index => {
+    clearInterval(intervalID);
+    carousal();
+    setIsClicked(prestate => {
+      prestate++;
+      if (prestate === Arraylength) {
+        prestate = 0;
+      }
+      return prestate;
+    });
+  };
   const RightChevron = ({ index, isClicked, setIsClicked }) => {
-    const onClickFn = index => {
-      clearInterval(intervalID);
-      carousal();
-      setIsClicked(prestate => {
-        prestate++;
-        if (prestate === Arraylength) {
-          prestate = 0;
-        }
-        return prestate;
-      });
-    };
-    return <i className={isClicked === index ? 'fa-solid fa-chevron-right chevron-adjust' : 'hidden'} onClick={() => { onClickFn(index); }}></i>;
+    return <i className={isClicked === index ? 'fa-solid fa-chevron-right chevron-adjust' : 'hidden'} onClick={() => { onClickFnRight(index); }}></i>;
   };
 
   const image = props.images.map((image, index) => {
     return <CarouPics key={index} index={index} data={image} isClicked={isClicked} setIsClicked={setIsClicked}/>;
   });
 
-  const leftChevron = props.images.map((image, index) => {
-    return <LeftChevron key={index} index={index} isClicked={isClicked} setIsClicked={setIsClicked} />;
-  });
-  const rightChevron = props.images.map((image, index) => {
-    return <RightChevron key={index} index={index} isClicked={isClicked} setIsClicked={setIsClicked} />;
-  });
-
   return (
     <div className='container'>
       <div className='chevron'>
-        {leftChevron}
+        <LeftChevron />
        {image}
-        {rightChevron}
+        <RightChevron />
       </div>
       <div className='icon-container'>
        {icons}
