@@ -18,6 +18,6 @@ app.get('/image1.jpg', (req, res) => {
 
 const pathToPublic = path.join(__dirname, 'public');
 console.log(pathToPublic);
-const expressStatic = express.static('public');
+const expressStatic = express.static(pathToPublic);
 app.use(expressStatic);
 app.listen(3000);
