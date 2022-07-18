@@ -53,7 +53,7 @@ function Carousel(props) {
     });
   };
   const LeftChevron = ({ index, isClicked, setIsClicked }) => {
-    return <i className={isClicked === index ? 'fa-solid fa-chevron-left chevron-adjust' : 'hidden'} onClick={() => { onClickFnLeft(index); }}></i>;
+    return <i className='fa-solid fa-chevron-left chevron-adjust' onClick={() => { onClickFnLeft(index); }}></i>;
   };
 
   const onClickFnRight = index => {
@@ -68,7 +68,7 @@ function Carousel(props) {
     });
   };
   const RightChevron = ({ index, isClicked, setIsClicked }) => {
-    return <i className={isClicked === index ? 'fa-solid fa-chevron-right chevron-adjust' : 'hidden'} onClick={() => { onClickFnRight(index); }}></i>;
+    return <i className='fa-solid fa-chevron-right chevron-adjust' onClick={() => { onClickFnRight(index); }}></i>;
   };
 
   const image = props.images.map((image, index) => {
