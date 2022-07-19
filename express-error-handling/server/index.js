@@ -50,12 +50,7 @@ app.post('/api/grades', (req, res, next) => {
       const [newGrade] = result.rows;
       res.status(201).json(newGrade);
     })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({
-        error: 'an unexpected error occurred'
-      });
-    });
+    .catch(err => next(err));
 });
 
 app.get('/api/grades/:gradeId', (req, res, next) => {
@@ -112,12 +107,7 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
         res.json(updatedGrade);
       }
     })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({
-        error: 'an unexpected error occurred'
-      });
-    });
+    .catch(err => next(err));
 });
 
 app.delete('/api/grades/:gradeId', (req, res, next) => {
