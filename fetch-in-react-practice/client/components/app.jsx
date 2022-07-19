@@ -44,11 +44,10 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
-    fetch('/api/todos')
+    fetch('/api/todos', { method: 'POST', body: JSON.stringify(newTodo), headers: { 'Content-Type': 'application/json' } })
       .then(response => response.json()).then(data => {
-
-        const jsonNewToDo = JSON.stringify(newTodo);
-        this.setState({ todos: data.concat(jsonNewToDo) });
+        // newTodo.todoId = 1 + Math.max(...data.map(d => d.todoId));
+        this.setState({ todos: this.state.todos.concat(data) });
       });
 
   }
@@ -75,6 +74,19 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+
+    var id;
+    for (var i = 0; i < this.state.todos.length; i++) {
+      if (this.state.todos[i].todoId === todoId) {
+        id = i;
+      }
+    }
+    fetch(`/api/todos/${todoId}`, { method: 'PATCH', body: JSON.stringify(this.state.todos), headers: { 'Content-Type': 'application/json' } })
+      .then(response => response.json()).then(data => {
+        var shallowcopy = [...this.state.todos];
+        shallowcopy[id].isCompleted = !this.state.todos[id].isCompleted;
+        this.setState({ todos: shallowcopy });
+      });
   }
 
   render() {
