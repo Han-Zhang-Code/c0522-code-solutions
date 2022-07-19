@@ -17,7 +17,8 @@ export default class App extends React.Component {
     fetch('/api/todos')
       .then(response => response.json())
       .then(data => {
-        this.setState({ users: data });
+
+        this.setState({ todos: data });
       });
     /**
      * Use fetch to send a GET request to `/api/todos`.
@@ -43,6 +44,13 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
+    fetch('/api/todos')
+      .then(response => response.json()).then(data => {
+
+        const jsonNewToDo = JSON.stringify(newTodo);
+        this.setState({ todos: data.concat(jsonNewToDo) });
+      });
+
   }
 
   toggleCompleted(todoId) {
