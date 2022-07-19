@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
+const CarouPics = ({ index, isClicked, setIsClicked, data }) => {
+  return (
+    <div key={'container' + index}>
+      <img key={'image' + index} src={data} className={isClicked === index ? 'image' : 'image hidden'} />
+    </div>
+  );
+};
+
 function Carousel(props) {
   const [isClicked, setIsClicked] = useState(0);
   const Arraylength = props.images.length;
@@ -33,13 +41,6 @@ function Carousel(props) {
     carousal();
     return () => clearInterval(intervalID);
   });
-  const CarouPics = ({ index, isClicked, setIsClicked, data }) => {
-    return (
-      <div key={'container' + index}>
-        <img key={'image' + index} src={data} className={isClicked === index ? 'image' : 'image hidden'} />
-      </div>
-    );
-  };
 
   const onClickFnLeft = index => {
     clearInterval(intervalID);
