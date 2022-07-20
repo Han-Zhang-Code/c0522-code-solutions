@@ -49,6 +49,25 @@ function Carousel(props) {
     carousal();
     return () => clearInterval(intervalID);
   }, [isClicked]);
+  // the following comment out code will work as well after deleted all carousal() function
+  // useEffect(() => {
+  //
+  //   console.log(Date.now() - t, 'start timer');
+  //   const timeoutId = setTimeout(() => {
+  //     setIsClicked(prestate => {
+  //       prestate++;
+  //       if (prestate === Arraylength) {
+  //         prestate = 0;
+  //       }
+  //       return prestate;
+  //     });
+  //   }, 3000);
+  //   return () => {
+  //     console.log(Date.now() - t, 'clean up carousal', timeoutId);
+  //     // clearInterval(intervalID);
+  //     clearTimeout(timeoutId);
+  //   };
+  // },[isClicked]);
 
   const onClickFnLeft = () => {
     clearInterval(intervalID);
