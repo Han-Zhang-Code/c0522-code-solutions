@@ -81,10 +81,11 @@ export default class App extends React.Component {
         id = i;
       }
     }
-    fetch(`/api/todos/${todoId}`, { method: 'PATCH', body: JSON.stringify(this.state.todos), headers: { 'Content-Type': 'application/json' } })
+    const newObject = { isCompleted: !this.state.todos[id].isCompleted };
+    fetch(`/api/todos/${todoId}`, { method: 'PATCH', body: JSON.stringify(newObject), headers: { 'Content-Type': 'application/json' } })
       .then(response => response.json()).then(data => {
         var shallowcopy = [...this.state.todos];
-        shallowcopy[id].isCompleted = !this.state.todos[id].isCompleted;
+        shallowcopy[id] = data;
         this.setState({ todos: shallowcopy });
       });
   }
