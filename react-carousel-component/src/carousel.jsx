@@ -18,6 +18,7 @@ const RightChevron = ({ onClickFnRight }) => {
 
 function Carousel(props) {
   const [isClicked, setIsClicked] = useState(0);
+  let [intervalID] = useState();
   const Arraylength = props.images.length;
 
   const onClickFnIcon = index => {
@@ -32,7 +33,6 @@ function Carousel(props) {
     onClick={() => { onClickFnIcon(index); }}></i>;
   });
 
-  let intervalID;
   const carousal = () => {
     intervalID = setInterval(() => {
       setIsClicked(prestate => {
@@ -48,7 +48,7 @@ function Carousel(props) {
   useEffect(() => {
     carousal();
     return () => clearInterval(intervalID);
-  });
+  }, [isClicked]);
 
   const onClickFnLeft = () => {
     clearInterval(intervalID);
