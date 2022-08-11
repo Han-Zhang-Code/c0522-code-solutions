@@ -1,9 +1,9 @@
 /* exported getLength */
 
 function getLength(list) {
-  var res = 1;
+  var res = 0;
 
-  while (list.next !== null) {
+  while (list) {
     res++;
     list = list.next;
   }
